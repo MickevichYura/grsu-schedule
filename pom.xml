@@ -1,0 +1,85 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.github.pixelase.bot</groupId>
+	<artifactId>UniversalTelegramBot</artifactId>
+
+	<version>${projectVersion}</version>
+
+
+	<name>UniversalTelegramBot</name>
+	<description>Codename: "SnatchBot"</description>
+	<url>https://github.com/Pixelase/UniversalTelegramBot</url>
+
+	<packaging>pom</packaging>
+	<properties>
+		<projectVersion>0.0.3</projectVersion>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<java.version>1.7</java.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
+	</properties>
+
+	<licenses>
+		<license>
+			<name>MIT License</name>
+			<url>https://github.com/Pixelase/UniversalTelegramBot/blob/master/LICENSE</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<scm>
+		<connection>scm:git:git@github.com:Pixelase/UniversalTelegramBot.git</connection>
+		<developerConnection>scm:git:git@github.com:Pixelase/UniversalTelegramBot.git</developerConnection>
+		<url>git@github.com:Pixelase/UniversalTelegramBot</url>
+	</scm>
+
+	<modules>
+		<module>server</module>
+		<module>launcher</module>
+		<module>modules</module>
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Modules -->
+			<dependency>
+				<groupId>com.github.pixelase.bot</groupId>
+				<artifactId>modules</artifactId>
+				<version>${projectVersion}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pixelase.bot</groupId>
+				<artifactId>launcher</artifactId>
+				<version>${projectVersion}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pixelase.bot</groupId>
+				<artifactId>server</artifactId>
+				<version>${projectVersion}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pixelase.bot</groupId>
+				<artifactId>modules-dependencies</artifactId>
+				<version>${projectVersion}</version>
+				<type>pom</type>
+			</dependency>
+
+			<!-- Other libs -->
+			<dependency>
+				<groupId>com.github.pengrad</groupId>
+				<artifactId>java-telegram-bot-api</artifactId>
+				<version>1.2.2</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<dependency>
+			<groupId>com.github.pengrad</groupId>
+			<artifactId>java-telegram-bot-api</artifactId>
+		</dependency>
+	</dependencies>
+</project>

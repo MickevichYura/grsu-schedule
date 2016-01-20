@@ -1,0 +1,43 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<parent>
+		<groupId>com.github.pixelase.bot</groupId>
+		<artifactId>UniversalTelegramBot</artifactId>
+		<version>${projectVersion}</version>
+	</parent>
+
+	<artifactId>modules</artifactId>
+	<name>modules</name>
+	<description>Modules pack</description>
+	<packaging>pom</packaging>
+	<url>https://github.com/Pixelase/UniversalTelegramBot/modules</url>
+
+	<modules>
+		<module>example-module</module>
+		<module>modules-dependencies</module>
+		<module>grsu-schedule-module</module>
+	</modules>
+
+
+	<dependencies>
+		<dependency>
+			<groupId>com.github.pixelase.bot</groupId>
+			<artifactId>server</artifactId>
+		</dependency>
+	</dependencies>
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>com.github.pixelase.bot</groupId>
+				<artifactId>example-module</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pixelase.bot</groupId>
+				<artifactId>grsu-schedule-module</artifactId>
+				<version>0.0.1</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>
